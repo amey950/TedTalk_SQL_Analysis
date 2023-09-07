@@ -181,4 +181,12 @@ UNION ALL
 )
 
 SELECT TAGSS , SUM(TOTAL_COUNT) FROM FINAL GROUP BY 1 ORDER BY 2 DESC LIMIT 5;       /* FINAL ANANLYSIS BY SUMMING UP 10 TAGS */ 
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Q) WRITE A QUERY TO FIND THE LIST OF YEAR OF POSTING AND NUMBER OF TED_TALKS POSTED IN THAT YEAR
+
+SELECT YEAR(TO_TIMESTAMP(POSTED_DATES)) , COUNT(*) FROM TED 
+GROUP BY 1 ORDER BY 2 DESC ;                               
+-------------------------------------------------------------------------------------------------------------------------------------
+
 
